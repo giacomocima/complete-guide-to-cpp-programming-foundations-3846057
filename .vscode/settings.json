@@ -19,7 +19,7 @@
   "explorer.compactFolders":false,
   "files.autoSave": "afterDelay",
   "screencastMode.onlyKeyboardShortcuts": true,
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
   "window.commandCenter":false,
   "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
   "workbench.fontAliasing": "antialiased",
