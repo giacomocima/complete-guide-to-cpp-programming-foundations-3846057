@@ -57,9 +57,8 @@ public:
     // Display inventory contents
     void displayInventory() const{
         std::cout << "Inventory: [ ";
-        for (size_t i = 0; i < items->size(); ++i){
-            std::cout << (*items)[i];
-            if (i < items->size() - 1) std::cout << ", ";
+        for (auto item : *items){
+            std::cout << item << std::endl;
         }
         std::cout << " ]" << std::endl;
     }
@@ -74,17 +73,26 @@ int main(){
     Inventory myInventory(5); 
     
     // Add 5 items
+    myInventory.addItem("Health Potion");
+    myInventory.addItem("Mana Potion");
+    myInventory.addItem("Sword");
+    myInventory.addItem("Shield");
+    myInventory.addItem("Bow");
 
     // Display current inventory
     myInventory.displayInventory(); 
 
     // Try to add another item when inventory is full
+    myInventory.addItem("Arrow");
 
     // Remove an item
+    myInventory.removeItem("Mana Potion");
 
     // Display the item count
+    std::cout << "The inventory now contains: " << myInventory.getItemCount() << " items" << std::endl;
 
     // Access item by index
+    std::cout << "Item at index 2 is: " << myInventory.getItem(2) << std::endl;
 
     // Display final state of inventory
     myInventory.displayInventory();
